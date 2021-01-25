@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?language javascript?>
+
+<!--
+ Controller - класс который выполняет действие(обрабатывает нажатие кнопки)
+              требует отдельного класса!
+ fx:controller="ru.specialist.java.fx.controller.ButtonController" - указываем путь к классу
+ -->
+
+<VBox alignment="Top_CENTER" prefHeight="400.0" prefWidth="600.0" spacing="20" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.specialist.java.fx.controller.ButtonController">
+
+    <Label>Create new author</Label>
+    <GridPane hgap="5" vgap="10">
+        <Label GridPane.columnIndex="0" GridPane.rowIndex="1">Author_id: </Label>
+        <Label GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+        <Label GridPane.columnIndex="0" GridPane.rowIndex="2">Book_id: </Label>
+        <Label GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+
+        <Label GridPane.columnIndex="0" GridPane.rowIndex="3">First name: </Label>
+        <Label GridPane.columnIndex="0" GridPane.rowIndex="4">Second name: </Label>
+        <Label GridPane.columnIndex="0" GridPane.rowIndex="5">Title: </Label>
+        <TextField editable="false" minWidth="-Infinity" prefHeight="26.0" prefWidth="212.0" promptText="First name" GridPane.columnIndex="1" GridPane.rowIndex="3">
+            <GridPane.margin>
+                <Insets right="10.0" />
+            </GridPane.margin></TextField>
+        <TextField promptText="Second name" GridPane.columnIndex="1" GridPane.rowIndex="4">
+            <GridPane.margin>
+                <Insets right="10.0" />
+            </GridPane.margin></TextField>
+        <TextField promptText="Title" GridPane.columnIndex="1" GridPane.rowIndex="5">
+            <GridPane.margin>
+                <Insets right="10.0" />
+            </GridPane.margin></TextField>
+
+        <padding>
+            <Insets left="15" right="10" />
+        </padding>
+
+    </GridPane>
+
+</VBox>

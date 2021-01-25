@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?language javascript?>
+
+<!--
+ AnchorPane - тоже панель, но мы ее не разбирали
+ http://javafx.com/javafx - описывает то, как должен выглядеть fxml файл
+ <VBox...></VBox>-в"..."  прописываем атрибуты к Vbox
+ Для обработки кнопки мы используем JS
+ -->
+
+<VBox alignment="CENTER"
+      spacing="10"
+      xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      prefHeight="400.0" prefWidth="600.0">
+        <HBox alignment="CENTER" spacing="10">
+            <Button>1</Button>
+            <Button>2</Button>
+            <Button>3</Button>
+        </HBox>
+        <HBox alignment="CENTER" spacing="20">
+            <Button>4</Button>
+            <Button>5</Button>
+            <Button>6</Button>
+            <padding>
+                <Insets top = "0" bottom="0" left="50" right="50"/>
+            </padding>
+        </HBox>
+    <GridPane alignment="CENTER" hgap="20" vgap="10">
+            <TextField GridPane.columnIndex="0" GridPane.rowIndex="0">7</TextField>
+            <TextField GridPane.columnIndex="1" GridPane.rowIndex="0">8</TextField>
+            <TextField GridPane.columnIndex="2" GridPane.rowIndex="0">9</TextField>
+        <padding>
+            <Insets left="50" right="50"/>
+        </padding>
+    </GridPane>
+
+    <Button onAction="onButtonClick ()">Click me!</Button>
+    <Label fx:id="myLabel"/>
+    <fx:script>
+        function onButtonClick () {
+        myLabel.setText("Text changed!");
+        }
+    </fx:script>
+</VBox>
